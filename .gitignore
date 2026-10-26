@@ -1,0 +1,25 @@
+# Only source code and essential repository documentation are eligible.
+*
+!*/
+!*.py
+!README.md
+!requirements.txt
+!LICENSE
+!.gitignore
+
+# Local inputs, dependencies and generated outputs are always excluded.
+third_party/
+data/
+datasets/
+weights/
+checkpoints/
+outputs/
+results/
+runs/
+logs/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.git/
