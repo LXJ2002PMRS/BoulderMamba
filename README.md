@@ -2,7 +2,7 @@
 
 BoulderMamba performs asteroid boulder instance segmentation using MambaVision-T, a three-stage Cascade detector, distributional residual box refinement, mask-quality scoring and native-pixel refinement (NPR).
 
-This repository contains the network architecture and training, prediction and evaluation interfaces. Data, weights, predictions, experiment results and ablation workflows are not included.
+This repository contains the network architecture and training, prediction and evaluation interfaces. 
 
 ## Structure
 
@@ -42,9 +42,9 @@ Provide native **500 × 500** images and COCO instance-mask annotations with one
 python train.py --data-root /path/to/images --train-ann /path/to/train.json --val-ann /path/to/validation.json
 ```
 
-Use `--init-checkpoint /path/to/model.pth` to initialize from a compatible complete checkpoint. Without it, training starts from random weights. Adjust `config.py` or use `--epochs`, `--lr` and `--accumulation-steps`. These are starting settings for this interface; they do not reconstruct every historical optimization stage of the paper model.
+Use `--init-checkpoint /path/to/model.pth` to initialize from a compatible complete checkpoint. Without it, training starts from random weights. Adjust `config.py` or use `--epochs`, `--lr` and `--accumulation-steps`. These are starting settings for this interface.
 
-Each run creates a separate dated `outputs/train_*/` directory. Checkpoints are selected by validation mask AP. The training interface accepts no test split. It saves model weights and logs; restarting the optimizer from a previous run is not implemented.
+Checkpoints are selected by validation mask AP. The training interface accepts no test split. It saves model weights and logs.
 
 ## Prediction
 
